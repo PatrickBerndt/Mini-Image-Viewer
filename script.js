@@ -5,16 +5,15 @@ function init(){
 }
 
 async function fetchFilenames() {
-    await fetch('getFilenames.php')
+        await fetch('getFilenames.php')
         .then(response => response.json())
         .then(data => {
             cleanList = data.slice(2);
             cleanList.forEach(filename => {
                 filenames.push(filename);
             });
-        })
-        .catch(error => {console.error(error);});
-        cardContent()
+        }) 
+    cardContent()
 }
 
 function cardContent(){
