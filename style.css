@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+
+.bubbles{
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    background-color: rgba(0, 115, 160, 0.5);
+
+}
+
+.isActiv{
+    background-color: rgba(110, 177, 240, 0.8) ;
+}
+
+.bottom-1{
+    bottom: 1rem;
+}
