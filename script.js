@@ -1,5 +1,8 @@
 let filenames = [];
 
+//Fill mode : false => image contain / true => image cover
+let fillMode = true;
+
 function init(){
     fetchFilenames();
 }
@@ -33,6 +36,12 @@ function cardContent(){
     });
 
     document.getElementById(`bubble0`).classList.add('isActiv');
+    changeMode();
+}
+
+function changeMode(){
+    let image = document.getElementById('image');
+    image.classList.add(fillMode? 'object-fit-cover' : 'object-fit-contain' )
 }
 
 function showPic(i){

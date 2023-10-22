@@ -1,36 +1,37 @@
+:root{
+  --bubble:rgba(0, 115, 160, 0.5);
+  --bubble-activ:rgba(110, 177, 240, 0.8);
+}
+
 body{
     margin: 0;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 5px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
-  }
-  
+  width: 8px;
+  height: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--bubble);
+  border-radius: 5px;
+}
 
 .bubbles{
     height: 1rem;
     width: 1rem;
     border-radius: 50%;
-    background-color: rgba(0, 115, 160, 0.5);
-
+    background-color: var(--bubble);
 }
 
 .isActiv{
-    background-color: rgba(110, 177, 240, 0.8) ;
+    background-color: var(--bubble-activ) ;
 }
 
 .bottom-1{
