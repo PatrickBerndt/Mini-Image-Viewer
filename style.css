@@ -1,6 +1,7 @@
 :root{
   --bubble:rgba(0, 115, 160, 0.5);
   --bubble-activ:rgba(110, 177, 240, 0.8);
+  --arrow: rgb(255, 254, 254);
 }
 
 body{
@@ -30,10 +31,27 @@ body{
     background-color: var(--bubble);
 }
 
+.arrow-bubble{
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: var(--bubble);
+}
+
 .isActiv{
     background-color: var(--bubble-activ) ;
 }
 
 .bottom-1{
     bottom: 1rem;
+}
+
+.arrow{
+  opacity: 10%;
+  transition: opacity 1s ease-in-out;
+}
+
+.arrow:hover{
+  opacity: 100%;
+  transition: opacity 1s ease-in-out;
 }

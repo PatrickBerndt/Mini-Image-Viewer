@@ -31,17 +31,30 @@ function cardContent(){
         <img src="img/${filename}"  onclick="showPic(${index})" class="object-fit-cover border rounded" style="width: 4rem; height: 4rem;">
         `;
         bubble.innerHTML += `
-        <div id="bubble${index}" class="bubbles" style="cursor: pointer;" onclick="showPic(${index})"></div>
+        <div id="bubble-${index}" class="bubbles" style="cursor: pointer;" onclick="showPic(${index})"></div>
         `;
     });
 
-    document.getElementById(`bubble0`).classList.add('isActiv');
+    document.getElementById(`bubble-0`).classList.add('isActiv');
     changeMode();
 }
 
 function changeMode(){
     let image = document.getElementById('image');
     image.classList.add(fillMode? 'object-fit-cover' : 'object-fit-contain' )
+}
+
+function next(direction){
+    const cla = document.querySelector('.isActiv');
+    const splitted = cla.id.split("-");
+    let i = splitted[1];
+    let next = i;
+    if(direction != -1){
+        (next == (filenames.length -1))? next = 0 : next++;
+    }else{
+        ( next == 0 )? next = (filenames.length -1) : next--;
+    }
+    showPic(next);
 }
 
 function showPic(i){
@@ -52,10 +65,10 @@ function showPic(i){
 
 function toggleBubble(i){
     for (let j = 0; j < filenames.length; j++) {
-        document.getElementById(`bubble${j}`).classList.remove('isActiv');
+        document.getElementById(`bubble-${j}`).classList.remove('isActiv');
     }
 
-    let bubble = document.getElementById(`bubble${i}`);
+    let bubble = document.getElementById(`bubble-${i}`);
     bubble.classList.add('isActiv')
 }
   
