@@ -1,6 +1,9 @@
 <?php
-// Specify the directory path
-$directory = './img';
+// Specify the directory path--------
+
+$directory = './img';  //  <<======||
+
+// ----------------------------------
 
 if (is_dir($directory)) {
     $files = array_diff(scandir($directory), array());
