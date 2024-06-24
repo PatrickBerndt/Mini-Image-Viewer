@@ -39,7 +39,7 @@ function cardContent(){
 
     filenames.forEach((filename, index) => {
         thumbnails.innerHTML += generateThumbnail(filename, index);
-        bubble.innerHTML += generateBubble(filename, index);
+        bubble.innerHTML += generateBubble(index);
     });
 
     document.getElementById(`bubble-0`).classList.add('isActiv');
@@ -106,7 +106,7 @@ function generateThumbnail(filename, index){
     `;
 }
 
-function generateBubble(filename, index){
+function generateBubble(index){
     return /*html*/`
     <div id="bubble-${index}" class="bubbles" style="cursor: pointer;" onclick="showPic(${index})"></div>
     `;
